@@ -1,0 +1,364 @@
+EESchema Schematic File Version 4
+LIBS:ATmega_UNI_power-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:Barrel_Jack_MountingPin J5
+U 1 1 5CD18897
+P 5100 4200
+F 0 "J5" H 5155 4517 50  0000 C CNN
+F 1 "PWR_Jack" H 5155 4426 50  0000 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_Wuerth_6941xx301002" H 5150 4160 50  0001 C CNN
+F 3 "~" H 5150 4160 50  0001 C CNN
+	1    5100 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:AMS1117-5.0 U55
+U 1 1 5CD18999
+P 6400 4200
+F 0 "U55" H 6400 4442 50  0000 C CNN
+F 1 "AMS1117-5.0" H 6400 4351 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 6400 4400 50  0001 C CNN
+F 3 "http://www.advanced-monolithic.com/pdf/ds1117.pdf" H 6500 3950 50  0001 C CNN
+	1    6400 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 4300 5600 4500
+Wire Wire Line
+	6700 4200 6800 4200
+$Comp
+L power:GND #PWR0113
+U 1 1 5CD2C6BC
+P 6400 4600
+F 0 "#PWR0113" H 6400 4350 50  0001 C CNN
+F 1 "GND" H 6405 4427 50  0000 C CNN
+F 2 "" H 6400 4600 50  0001 C CNN
+F 3 "" H 6400 4600 50  0001 C CNN
+	1    6400 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1_Small C51
+U 1 1 5CD3B6FA
+P 5900 4350
+F 0 "C51" H 5991 4396 50  0000 L CNN
+F 1 "10uF" H 5991 4305 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-3528-21_Kemet-B" H 5900 4350 50  0001 C CNN
+F 3 "~" H 5900 4350 50  0001 C CNN
+	1    5900 4350
+	1    0    0    -1  
+$EndComp
+Connection ~ 5900 4200
+Wire Wire Line
+	5900 4200 6100 4200
+Wire Wire Line
+	6400 4500 6400 4600
+Connection ~ 6400 4500
+$Comp
+L Device:CP1_Small C52
+U 1 1 5CD429A0
+P 7500 4300
+F 0 "C52" H 7591 4346 50  0000 L CNN
+F 1 "10uF" H 7591 4255 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-3528-21_Kemet-B" H 7500 4300 50  0001 C CNN
+F 3 "~" H 7500 4300 50  0001 C CNN
+	1    7500 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 4500 5900 4500
+Wire Wire Line
+	5900 4200 5900 4250
+Wire Wire Line
+	5900 4450 5900 4500
+Connection ~ 5900 4500
+Wire Wire Line
+	5900 4500 6400 4500
+Text GLabel 5900 4050 1    50   Input ~ 0
+RAW
+Wire Wire Line
+	5900 4050 5900 4100
+$Comp
+L Regulator_Linear:LP2985-3.3 U53
+U 1 1 5CCF0000
+P 5100 2750
+F 0 "U53" H 5100 3092 50  0000 C CNN
+F 1 "LP2985-3.3" H 5100 3001 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 5100 3075 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lp2985.pdf" H 5100 2750 50  0001 C CNN
+	1    5100 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 2650 4650 2650
+Wire Wire Line
+	4650 2650 4650 2600
+Wire Wire Line
+	4700 2750 4650 2750
+Wire Wire Line
+	4650 2750 4650 2650
+Connection ~ 4650 2650
+$Comp
+L power:+5V #PWR0119
+U 1 1 5CCF8B2E
+P 4650 2600
+F 0 "#PWR0119" H 4650 2450 50  0001 C CNN
+F 1 "+5V" H 4665 2773 50  0000 C CNN
+F 2 "" H 4650 2600 50  0001 C CNN
+F 3 "" H 4650 2600 50  0001 C CNN
+	1    4650 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0120
+U 1 1 5CD0195A
+P 5100 3100
+F 0 "#PWR0120" H 5100 2850 50  0001 C CNN
+F 1 "GND" H 5105 2927 50  0000 C CNN
+F 2 "" H 5100 3100 50  0001 C CNN
+F 3 "" H 5100 3100 50  0001 C CNN
+	1    5100 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 3050 5100 3100
+$Comp
+L power:+3.3V #PWR0122
+U 1 1 5CD252E3
+P 6050 2600
+F 0 "#PWR0122" H 6050 2450 50  0001 C CNN
+F 1 "+3.3V" H 6065 2773 50  0000 C CNN
+F 2 "" H 6050 2600 50  0001 C CNN
+F 3 "" H 6050 2600 50  0001 C CNN
+	1    6050 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 2650 6050 2600
+$Comp
+L power:GND #PWR0126
+U 1 1 5CD506BB
+P 3600 4350
+F 0 "#PWR0126" H 3600 4100 50  0001 C CNN
+F 1 "GND" H 3605 4177 50  0000 C CNN
+F 2 "" H 3600 4350 50  0001 C CNN
+F 3 "" H 3600 4350 50  0001 C CNN
+	1    3600 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R9
+U 1 1 5CD50827
+P 4150 4300
+F 0 "R9" V 4357 4300 50  0000 C CNN
+F 1 "1k" V 4266 4300 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 4080 4300 50  0001 C CNN
+F 3 "~" H 4150 4300 50  0001 C CNN
+	1    4150 4300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D9
+U 1 1 5CD509B1
+P 3850 4300
+F 0 "D9" H 3842 4045 50  0000 C CNN
+F 1 "PWR" H 3842 4136 50  0000 C CNN
+F 2 "LED_SMD.debian:LED_0603_1608Metric_symbol" H 3850 4300 50  0001 C CNN
+F 3 "~" H 3850 4300 50  0001 C CNN
+	1    3850 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 4300 4400 4300
+Wire Wire Line
+	4400 4300 4400 4250
+Wire Wire Line
+	3700 4300 3600 4300
+Wire Wire Line
+	3600 4300 3600 4350
+$Comp
+L Device:D D5
+U 1 1 5CD6399C
+P 5750 4100
+F 0 "D5" H 5750 3884 50  0000 C CNN
+F 1 "D" H 5750 3975 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-323_HandSoldering_F_SilkS_Sym" H 5750 4100 50  0001 C CNN
+F 3 "~" H 5750 4100 50  0001 C CNN
+	1    5750 4100
+	-1   0    0    1   
+$EndComp
+Connection ~ 5900 4100
+Wire Wire Line
+	5900 4100 5900 4200
+$Comp
+L power:GND #PWR0117
+U 1 1 5CD3AE82
+P 7500 4550
+F 0 "#PWR0117" H 7500 4300 50  0001 C CNN
+F 1 "GND" H 7505 4377 50  0000 C CNN
+F 2 "" H 7500 4550 50  0001 C CNN
+F 3 "" H 7500 4550 50  0001 C CNN
+	1    7500 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 4200 7500 4200
+$Comp
+L Device:C_Small C54
+U 1 1 5CD992DA
+P 5950 2900
+F 0 "C54" V 5721 2900 50  0000 C CNN
+F 1 "2.2uF" V 5812 2900 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5950 2900 50  0001 C CNN
+F 3 "~" H 5950 2900 50  0001 C CNN
+	1    5950 2900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5950 2800 5950 2650
+Connection ~ 5950 2650
+Wire Wire Line
+	5950 2650 6050 2650
+Wire Wire Line
+	5950 3000 5950 3100
+$Comp
+L Device:C_Small C55
+U 1 1 5D96850C
+P 5550 2900
+F 0 "C55" V 5321 2900 50  0000 C CNN
+F 1 "0.01uF" V 5412 2900 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5550 2900 50  0001 C CNN
+F 3 "~" H 5550 2900 50  0001 C CNN
+	1    5550 2900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5500 2750 5550 2750
+Wire Wire Line
+	5550 2750 5550 2800
+Wire Wire Line
+	5550 3000 5550 3100
+Connection ~ 5550 3100
+Wire Wire Line
+	5550 3100 5950 3100
+Wire Wire Line
+	5100 3100 5550 3100
+Connection ~ 5100 3100
+Wire Wire Line
+	5500 2650 5950 2650
+Wire Wire Line
+	7500 4400 7500 4550
+Connection ~ 6800 4200
+Wire Wire Line
+	6800 3700 6800 3950
+Text GLabel 5550 4050 1    50   Input ~ 0
+RAW_JACK
+Wire Wire Line
+	5400 4300 5600 4300
+Wire Wire Line
+	5100 4500 5600 4500
+Connection ~ 5600 4500
+Wire Wire Line
+	5400 4100 5550 4100
+Wire Wire Line
+	5550 4050 5550 4100
+Connection ~ 5550 4100
+Wire Wire Line
+	5550 4100 5600 4100
+$Comp
+L power:+5V #PWR0101
+U 1 1 5D98687D
+P 4400 4250
+F 0 "#PWR0101" H 4400 4100 50  0001 C CNN
+F 1 "+5V" H 4415 4423 50  0000 C CNN
+F 2 "" H 4400 4250 50  0001 C CNN
+F 3 "" H 4400 4250 50  0001 C CNN
+	1    4400 4250
+	1    0    0    -1  
+$EndComp
+Text GLabel 6150 2650 2    50   Input ~ 0
+3.3V
+Wire Wire Line
+	6050 2650 6150 2650
+Connection ~ 6050 2650
+Text GLabel 6900 3950 2    50   Input ~ 0
+5V
+$Comp
+L power:+5V #PWR0102
+U 1 1 5D9F88C4
+P 6800 3700
+F 0 "#PWR0102" H 6800 3550 50  0001 C CNN
+F 1 "+5V" H 6815 3873 50  0000 C CNN
+F 2 "" H 6800 3700 50  0001 C CNN
+F 3 "" H 6800 3700 50  0001 C CNN
+	1    6800 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 3950 6800 3950
+Connection ~ 6800 3950
+Wire Wire Line
+	6800 3950 6800 4200
+$Comp
+L Connector:Conn_01x04_Male J9
+U 1 1 5D9F931D
+P 7150 2750
+F 0 "J9" H 7043 2325 50  0000 C CNN
+F 1 "Power_Conn" H 7043 2416 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 7150 2750 50  0001 C CNN
+F 3 "~" H 7150 2750 50  0001 C CNN
+	1    7150 2750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6950 2850 6850 2850
+$Comp
+L power:GND #PWR0103
+U 1 1 5D9FA147
+P 6850 3150
+F 0 "#PWR0103" H 6850 2900 50  0001 C CNN
+F 1 "GND" H 6855 2977 50  0000 C CNN
+F 2 "" H 6850 3150 50  0001 C CNN
+F 3 "" H 6850 3150 50  0001 C CNN
+	1    6850 3150
+	1    0    0    -1  
+$EndComp
+Text GLabel 6950 2750 0    50   Input ~ 0
+3.3V
+Text GLabel 6950 2650 0    50   Input ~ 0
+5V
+Text GLabel 6950 2550 0    50   Input ~ 0
+RAW_JACK
+$Comp
+L Connector:Conn_01x01_Male J91
+U 1 1 5D9FAF65
+P 7150 3050
+F 0 "J91" H 7043 2625 50  0000 C CNN
+F 1 "Power_Conn" H 7043 2716 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x01_P2.54mm_Vertical" H 7150 3050 50  0001 C CNN
+F 3 "~" H 7150 3050 50  0001 C CNN
+	1    7150 3050
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 3050 6850 3050
+Wire Wire Line
+	6850 2850 6850 3050
+Wire Wire Line
+	6850 3050 6850 3150
+Connection ~ 6850 3050
+$EndSCHEMATC
