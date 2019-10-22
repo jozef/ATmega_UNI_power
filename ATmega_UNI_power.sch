@@ -15,17 +15,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Connector:Barrel_Jack_MountingPin J5
-U 1 1 5CD18897
-P 5100 4200
-F 0 "J5" H 5155 4517 50  0000 C CNN
-F 1 "PWR_Jack" H 5155 4426 50  0000 C CNN
-F 2 "Connector_BarrelJack:BarrelJack_Wuerth_6941xx301002" H 5150 4160 50  0001 C CNN
-F 3 "~" H 5150 4160 50  0001 C CNN
-	1    5100 4200
-	1    0    0    -1  
-$EndComp
-$Comp
 L Regulator_Linear:AMS1117-5.0 U55
 U 1 1 5CD18999
 P 6400 4200
@@ -36,8 +25,6 @@ F 3 "http://www.advanced-monolithic.com/pdf/ds1117.pdf" H 6500 3950 50  0001 C C
 	1    6400 4200
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5600 4300 5600 4500
 Wire Wire Line
 	6700 4200 6800 4200
 $Comp
@@ -80,25 +67,20 @@ F 3 "~" H 7500 4300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5600 4500 5900 4500
-Wire Wire Line
 	5900 4200 5900 4250
 Wire Wire Line
 	5900 4450 5900 4500
-Connection ~ 5900 4500
 Wire Wire Line
 	5900 4500 6400 4500
-Text GLabel 5900 4050 1    50   Input ~ 0
+Text GLabel 5900 3800 1    50   Input ~ 0
 RAW
-Wire Wire Line
-	5900 4050 5900 4100
 $Comp
 L Regulator_Linear:LP2985-3.3 U53
 U 1 1 5CCF0000
 P 5100 2750
 F 0 "U53" H 5100 3092 50  0000 C CNN
 F 1 "LP2985-3.3" H 5100 3001 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-5" H 5100 3075 50  0001 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5_no_lines" H 5100 3075 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lp2985.pdf" H 5100 2750 50  0001 C CNN
 	1    5100 2750
 	1    0    0    -1  
@@ -265,20 +247,8 @@ Wire Wire Line
 Connection ~ 6800 4200
 Wire Wire Line
 	6800 3700 6800 3950
-Text GLabel 5550 4050 1    50   Input ~ 0
+Text GLabel 5450 4100 0    50   Input ~ 0
 RAW_JACK
-Wire Wire Line
-	5400 4300 5600 4300
-Wire Wire Line
-	5100 4500 5600 4500
-Connection ~ 5600 4500
-Wire Wire Line
-	5400 4100 5550 4100
-Wire Wire Line
-	5550 4050 5550 4100
-Connection ~ 5550 4100
-Wire Wire Line
-	5550 4100 5600 4100
 $Comp
 L power:+5V #PWR0101
 U 1 1 5D98687D
@@ -319,7 +289,7 @@ U 1 1 5D9F931D
 P 7150 2750
 F 0 "J9" H 7043 2325 50  0000 C CNN
 F 1 "Power_Conn" H 7043 2416 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 7150 2750 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical_no_lines" H 7150 2750 50  0001 C CNN
 F 3 "~" H 7150 2750 50  0001 C CNN
 	1    7150 2750
 	-1   0    0    1   
@@ -344,21 +314,42 @@ Text GLabel 6950 2650 0    50   Input ~ 0
 Text GLabel 6950 2550 0    50   Input ~ 0
 RAW_JACK
 $Comp
-L Connector:Conn_01x01_Male J91
+L Connector:Conn_01x02_Male J91
 U 1 1 5D9FAF65
-P 7150 3050
-F 0 "J91" H 7043 2625 50  0000 C CNN
-F 1 "Power_Conn" H 7043 2716 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x01_P2.54mm_Vertical" H 7150 3050 50  0001 C CNN
-F 3 "~" H 7150 3050 50  0001 C CNN
-	1    7150 3050
-	-1   0    0    -1  
+P 5300 4400
+F 0 "J91" H 5200 4400 50  0000 C CNN
+F 1 "RAW_Conn" H 5200 4500 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical_no_lines" H 5300 4400 50  0001 C CNN
+F 3 "~" H 5300 4400 50  0001 C CNN
+	1    5300 4400
+	1    0    0    1   
 $EndComp
 Wire Wire Line
-	6950 3050 6850 3050
+	5450 4100 5550 4100
 Wire Wire Line
-	6850 2850 6850 3050
+	5900 3800 5900 4100
+Connection ~ 5550 4100
 Wire Wire Line
-	6850 3050 6850 3150
-Connection ~ 6850 3050
+	5550 4100 5600 4100
+Wire Wire Line
+	6850 2850 6850 3150
+Wire Wire Line
+	5500 4300 5550 4300
+Wire Wire Line
+	5550 4300 5550 4100
+$Comp
+L power:GND #PWR?
+U 1 1 5DAF7D79
+P 5550 4450
+F 0 "#PWR?" H 5550 4200 50  0001 C CNN
+F 1 "GND" H 5555 4277 50  0000 C CNN
+F 2 "" H 5550 4450 50  0001 C CNN
+F 3 "" H 5550 4450 50  0001 C CNN
+	1    5550 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 4400 5550 4400
+Wire Wire Line
+	5550 4400 5550 4450
 $EndSCHEMATC
