@@ -338,10 +338,10 @@ Wire Wire Line
 Wire Wire Line
 	5550 4300 5550 4100
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0104
 U 1 1 5DAF7D79
 P 5550 4450
-F 0 "#PWR?" H 5550 4200 50  0001 C CNN
+F 0 "#PWR0104" H 5550 4200 50  0001 C CNN
 F 1 "GND" H 5555 4277 50  0000 C CNN
 F 2 "" H 5550 4450 50  0001 C CNN
 F 3 "" H 5550 4450 50  0001 C CNN
@@ -352,4 +352,41 @@ Wire Wire Line
 	5500 4400 5550 4400
 Wire Wire Line
 	5550 4400 5550 4450
+$Comp
+L Connector:Barrel_Jack_MountingPin J1
+U 1 1 5DB0B570
+P 8350 2750
+F 0 "J1" H 8405 3067 50  0000 C CNN
+F 1 "Barrel_Jack_MountingPin" H 8405 2976 50  0000 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_Wuerth_6941xx301002_no_lines" H 8400 2710 50  0001 C CNN
+F 3 "~" H 8400 2710 50  0001 C CNN
+	1    8350 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8350 3050 8700 3050
+Wire Wire Line
+	8650 2850 8700 2850
+Wire Wire Line
+	8700 2850 8700 3050
+$Comp
+L Connector:Conn_01x02_Male J92
+U 1 1 5DB0C5B5
+P 9100 2750
+F 0 "J92" H 9000 2750 50  0000 C CNN
+F 1 "RAW_Conn" H 9000 2850 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical_no_lines" H 9100 2750 50  0001 C CNN
+F 3 "~" H 9100 2750 50  0001 C CNN
+	1    9100 2750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8650 2650 8900 2650
+Wire Wire Line
+	8700 2850 8850 2850
+Wire Wire Line
+	8850 2850 8850 2750
+Wire Wire Line
+	8850 2750 8900 2750
+Connection ~ 8700 2850
 $EndSCHEMATC
